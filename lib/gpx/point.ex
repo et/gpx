@@ -8,4 +8,9 @@ defmodule Gpx.Point do
     lon: float,
     ele: float
   }
+  defstruct [
+    :lat,
+    :lon,
+    :ele
+  ]
 end
