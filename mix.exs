@@ -1,12 +1,18 @@
 defmodule Gpx.Mixfile do
   use Mix.Project
 
+  @description """
+  A GPX parsing library.
+  """
+
   def project do
     [app: :gpx,
      version: "0.1.0",
      elixir: "~> 1.3",
+     description: @description,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     package: package(),
      deps: deps()]
   end
 
@@ -14,7 +20,7 @@ defmodule Gpx.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    []
   end
 
   # Dependencies can be Hex packages:
@@ -29,6 +35,16 @@ defmodule Gpx.Mixfile do
   defp deps do
     [
       {:sweet_xml, "~> 0.6.2"}
+    ]
+  end
+
+  defp package do
+    [
+      name: :gpx,
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["Eric Thomas"],
+      licences: ["MIT"],
+      links: %{GitHub => "https://github.com/et/gpx"}
     ]
   end
 end
