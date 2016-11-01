@@ -1,13 +1,16 @@
 # Gpx
 
-WIP
-GPX is a `.gpx` parser.
+GPX is a parser for the [GPS Exchange Format](https://en.wikipedia.org/wiki/GPS_Exchange_Format).
 
 ## Usage
 
-gpx = Gpx.parse('/path/to/file.gpx')
+Use `Gpx.parse` to return a `List` of `Gpx.Point`s.
+
+```
+gpx = Gpx.parse("<trkseg><trkpt>...</trkpt><trkpt>...</trkpt></trkseg>")
 => [%Gpx.Point{ele: 4.46, lat: 47.644548, lon: -122.326897}
    ...]
+```
 
 ## Installation
 
