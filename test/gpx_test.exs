@@ -43,12 +43,14 @@ defmodule GpxTest do
     [point1, point2] = points
     assert point1 == %Gpx.Point{
       lat: 39.9600780,
-      lon: -105.2365950
+      lon: -105.2365950,
+      ele: 1665.4
     }
 
     assert point2 == %Gpx.Point{
       lat: 39.9600450,
-      lon: -105.2366200
+      lon: -105.2366200,
+      ele: 1665.4
     }
   end
 end

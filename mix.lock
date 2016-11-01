@@ -1,1 +1,2 @@
-%{"exml": {:hex, :exml, "0.1.0", "515c47e88e15322b5ab4a7aade8a866253d30e2b95263c3b6015eee8e5e32014", [:mix], []}}
+%{"exml": {:hex, :exml, "0.1.0", "515c47e88e15322b5ab4a7aade8a866253d30e2b95263c3b6015eee8e5e32014", [:mix], []},
+  "sweet_xml": {:hex, :sweet_xml, "0.6.2", "8f8aadd902dcc62fb85b7a308bb6a083874e97eb51ccddaf855d97c8ffad7d64", [:mix], []}}
