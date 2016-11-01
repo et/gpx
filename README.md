@@ -1,5 +1,8 @@
 # Gpx
 
+[![Travis](https://img.shields.io/travis/et/gpx.svg)](https://travis-ci.org/et/gpx)
+[![Hex.pm](https://img.shields.io/hexpm/v/gpx.svg)](https://hex.pm/packages/gpx)
+
 GPX is a parser for the [GPS Exchange Format](https://en.wikipedia.org/wiki/GPS_Exchange_Format).
 
 ## Usage
