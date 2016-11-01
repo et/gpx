@@ -44,13 +44,20 @@ defmodule GpxTest do
     assert point1 == %Gpx.Point{
       lat: 39.9600780,
       lon: -105.2365950,
-      ele: 1665.4
+      ele: 1665.4,
+      time: ~N[2016-10-30 14:34:21]
     }
 
     assert point2 == %Gpx.Point{
       lat: 39.9600450,
       lon: -105.2366200,
-      ele: 1665.4
+      ele: 1665.4,
+      time: ~N[2016-10-30 14:34:22]
     }
+  end
+
+  test "parse_date" do
+    assert Gpx.parse_date("2016-10-30T14:34:22Z") == ~N[2016-10-30 14:34:22]
+    assert Gpx.parse_date("not valid") == "not valid"
   end
 end

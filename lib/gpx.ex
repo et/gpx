@@ -13,7 +13,20 @@ defmodule Gpx do
         lat: trkpt |> xpath(~x"./@lat"f),
         lon: trkpt |> xpath(~x"./@lon"f),
         ele: trkpt |> xpath(~x"./ele/text()"f),
+        time: trkpt |> xpath(~x"./time/text()"s) |> Gpx.parse_date
       }
     end)
+  end
+
+  @doc """
+  Tries to parse a date `String` into a `NaiveDateTime`
+  If it fails to do so, it simply returns the `String`.
+  """
+  @spec parse(String.t) :: NaiveDateTime.t | String.t
+  def parse_date(date) do
+    case NaiveDateTime.from_iso8601(date) do
+      {:ok, date} -> date
+      {:error, _} -> date
+    end
   end
 end
