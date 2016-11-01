@@ -6,8 +6,9 @@ GPX is a parser for the [GPS Exchange Format](https://en.wikipedia.org/wiki/GPS_
 
 Use `Gpx.parse` to return a `List` of `Gpx.Point`s.
 
-```
-gpx = Gpx.parse("<trkseg><trkpt>...</trkpt><trkpt>...</trkpt></trkseg>")
+```elixir
+{:ok, content} = File.read("/path/to/file.gpx")
+points = Gpx.parse(content)
 => [%Gpx.Point{ele: 4.46, lat: 47.644548, lon: -122.326897}
    ...]
 ```
