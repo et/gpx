@@ -43,7 +43,7 @@ defmodule Gpx.Mixfile do
       name: :gpx,
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Eric Thomas"],
-      licences: ["MIT"],
+      licenses: ["MIT"],
       links: %{GitHub => "https://github.com/et/gpx"}
     ]
   end
