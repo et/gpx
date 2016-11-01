@@ -35,7 +35,8 @@ defmodule Gpx.Mixfile do
   defp deps do
     [
       {:ex_doc, "~> 0.13", only: :dev},
-      {:sweet_xml, "~> 0.6.2"}
+      {:dialyxir, "~> 0.3.5", only: [:dev]},
+      {:sweet_xml, "~> 0.6.2"},
     ]
   end
 
