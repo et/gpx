@@ -1,4 +1,8 @@
 defmodule Gpx do
+  @moduledoc """
+  Gpx is a simple utility for parsing the GPX XML format.
+  """
+
   import SweetXml
 
   @doc """
